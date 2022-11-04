@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
       
         <p className={styles.description}>
-          Created by Clemson Username: rkaranj
+          Created by (Clemson Username): rkaranj
         </p>
 
         <p className={styles.description}>
