@@ -64,15 +64,16 @@ function makeGame(div) {
             // reset the selection state to unselected
             selected = null;
             console.log("AI CHANCE")
-                const [movedFrom, movedTo] = Object.entries(game.aiMove())[0];
+                
+            const [movedFrom, movedTo] = Object.entries(game.aiMove())[0];
 
-                // move the piece
-                gameState = game.exportJson();
+            // move the piece
+            gameState = game.exportJson();
 
-                // update the text by clearing out the old square
-                document.getElementById(movedFrom).innerText = "";
-                // and putting the piece on the new square
-                document.getElementById(movedTo).innerText = GLYPHS[gameState.pieces[movedTo]];
+            // update the text by clearing out the old square
+            document.getElementById(movedFrom).innerText = "";
+            // put the piece on the new square
+            document.getElementById(movedTo).innerText = GLYPHS[gameState.pieces[movedTo]];
         } 
         else if (gameState.moves[square]) {
             // clicked on a piece that can move,
